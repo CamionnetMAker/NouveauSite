@@ -19,7 +19,7 @@
 <meta name="ICBM" content="48.7521566, 2.3606119">
 
 <!-- URL canonique — évite le duplicate content -->
-<link rel="canonical" href="/NouveauSite/">
+<link rel="canonical" href="https://www.lavagecamions.com/">
 
 <!-- ═══════════════════════════════════════════════════ -->
 <!-- Open Graph (Facebook, LinkedIn, WhatsApp, Slack) -->
@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="Camion Net">
 <meta property="og:title" content="Camion Net — Lavage poids lourd Rungis & stations mobiles en France">
 <meta property="og:description" content="Spécialiste du lavage industriel de véhicules depuis 2002. Centre Rungis (94) + 25 unités mobiles dans 75 départements. Lavage, désinfection HACCP, chambres froides.">
-<meta property="og:url" content="/NouveauSite/">
+<meta property="og:url" content="https://www.lavagecamions.com/">
 <meta property="og:image" content="/NouveauSite/og-camionnet.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -702,10 +702,10 @@ img{max-width:100%;display:block;}
 <title>Nettoyage station-service & aire carburant — Haute pression | Camion Net</title>
 <meta name="description" content="Entreprise de nettoyage industriel de stations-service : auvents, pistes, îlots, dalles, caniveaux, bardages. Intervention hors heures d'exploitation, traitement des eaux selon équipement du site.">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="/NouveauSite/entreprise-nettoyage-industriel-station-service/">
+<link rel="canonical" href="https://www.lavagecamions.com/entreprise-nettoyage-industriel-station-service">
 <meta property="og:title" content="Nettoyage station-service & aire carburant — Haute pression | Camion Net">
 <meta property="og:description" content="Entreprise de nettoyage industriel de stations-service : auvents, pistes, îlots, dalles, caniveaux, bardages. Intervention hors heures d'exploitation, traitement des eaux selon équipement du site.">
-<meta property="og:url" content="/NouveauSite/entreprise-nettoyage-industriel-station-service/">
+<meta property="og:url" content="https://www.lavagecamions.com/entreprise-nettoyage-industriel-station-service">
 <meta name="twitter:title" content="Nettoyage station-service & aire carburant — Haute pression | Camion Net">
 <meta name="twitter:description" content="Entreprise de nettoyage industriel de stations-service : auvents, pistes, îlots, dalles, caniveaux, bardages. Intervention hors heures d'exploitation, traitement des eaux selon équipement du site.">
 
@@ -717,6 +717,17 @@ html, body { background: #fff; }
 body { margin: 0; padding: 0; }
 /* Masquer le bandeau "Design staging — non publié en production" */
 .footer-bottom > div[style*="Design staging"] { display: none !important; }
+/* Footer élargi : 6 colonnes (brand + 4 cols liens + contact) */
+.footer-top { grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr 1.1fr !important; gap: 28px !important; }
+@media(max-width: 1100px) {
+ .footer-top { grid-template-columns: 1fr 1fr 1fr !important; }
+}
+@media(max-width: 700px) {
+ .footer-top { grid-template-columns: 1fr 1fr !important; }
+}
+@media(max-width: 480px) {
+ .footer-top { grid-template-columns: 1fr !important; }
+}
 </style>
 
 </head>
@@ -944,15 +955,31 @@ body { margin: 0; padding: 0; }
  <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-chambre-froide/'">Chambres froides</span>
  <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-batiment-industriel/'">Bardage & bâtiments</span>
  <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-mobilier-urbain/'">Mobilier urbain</span>
+ <span class="footer-link" onclick="window.location.href='/NouveauSite/entreprise-nettoyage-industriel-station-service/'">Nettoyage station-service</span>
  </div>
  <div class="footer-col">
  <h4>Véhicules</h4>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-vehicule-pro/'">Camionnette & VUL</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-vehicule-pro/'">Camion 20m³</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-vehicule-pro/'">Poids lourd (SPL)</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-vehicule-pro/'">Camion frigorifique</span>
+ <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camionnette/'">Camionnette & VUL</span>
+ <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-20m3/'">Camion 20m³</span>
+ <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-poids-lourd/'">Poids lourd (SPL)</span>
+ <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-frigorifique/'">Camion frigorifique</span>
  <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-vehicule-pro/'">Bus & car</span>
  <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-vehicule-pro/'">Engins TP</span>
+ </div>
+ <div class="footer-col">
+ <h4>Prestations</h4>
+ <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-exterieur-camion/'">Lavage extérieur HP</span>
+ <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-interieur-caisse-camion/'">Nettoyage intérieur caisse</span>
+ <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-cabine-camion/'">Nettoyage cabine</span>
+ <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-frigorifique/'">Désinfection HACCP</span>
+ </div>
+ <div class="footer-col">
+ <h4>Villes</h4>
+ <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-paris/'">Paris (75)</span>
+ <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-bordeaux/'">Bordeaux (33)</span>
+ <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-toulouse/'">Toulouse (31)</span>
+ <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-montpellier/'">Montpellier (34)</span>
+ <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-agen/'">Agen (47)</span>
  </div>
  <div class="footer-col">
  <h4>Contact</h4>
