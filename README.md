@@ -2,7 +2,7 @@
 
 Preview publique du site Camion Net v2 avant intégration dans Wix.
 
-**URL en ligne :** https://camionnetmaker.github.io/lavagecamions-preview/
+**URL en ligne :** https://camionnetmaker.github.io/NouveauSite/
 
 ## Structure
 
@@ -12,10 +12,10 @@ Preview publique du site Camion Net v2 avant intégration dans Wix.
 
 ## Comment déployer
 
-1. Créer un nouveau repo GitHub nommé **`lavagecamions-preview`** (ou adapter `REPO_PREFIX` dans `build_github_preview.py`).
+1. Créer un nouveau repo GitHub nommé **`NouveauSite`** (ou adapter `REPO_PREFIX` dans `build_github_preview.py`).
 2. Pousser ce dossier à la racine du repo.
 3. Settings -> Pages -> Deploy from branch -> `main` / root.
-4. Attendre 1–2 minutes. Le site est accessible à https://<ton-user>.github.io/lavagecamions-preview/
+4. Attendre 1–2 minutes. Le site est accessible à https://<ton-user>.github.io/NouveauSite/
 
 ## Regénérer
 
