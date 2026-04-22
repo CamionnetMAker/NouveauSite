@@ -1062,6 +1062,130 @@ window.addEventListener('message', function(e) {
  }
  }
 });
+
+/* ═══ ANIMATIONS : carte France + count-up + stagger reveal ═══ */
+(function(){
+ // Helper : IntersectionObserver sécurisé
+ if (typeof IntersectionObserver === 'undefined') return;
+
+ // 1. Apparition cascade des villes sur la carte + tooltips
+ function initCarteFrance(){
+ var cities = document.querySelectorAll('.cdf-city');
+ if (!cities.length) return;
+ var tip = document.getElementById('cdf-tooltip');
+ var mapWrap = document.querySelector('.cdf-map-wrap');
+ cities.forEach(function(c, i){
+ setTimeout(function(){
+ c.style.transition = 'opacity 0.5s ease-out';
+ c.style.opacity = '1';
+ }, 300 + i * 40);
+ if (tip && mapWrap){
+ c.addEventListener('mouseenter', function(){
+ var name = c.getAttribute('data-city');
+ var dpt = c.getAttribute('data-dpt');
+ tip.innerHTML = name + ' <span style="color:#14D9C2;margin-left:4px;font-weight:400;">dépt. ' + dpt + '</span>';
+ tip.style.opacity = '1';
+ var circle = c.querySelector('circle:last-of-type');
+ if (circle) circle.style.transform = 'scale(1.4)';
+ });
+ c.addEventListener('mousemove', function(e){
+ var r = mapWrap.getBoundingClientRect();
+ tip.style.left = (e.clientX - r.left + 14) + 'px';
+ tip.style.top = (e.clientY - r.top - 32) + 'px';
+ });
+ c.addEventListener('mouseleave', function(){
+ tip.style.opacity = '0';
+ var circle = c.querySelector('circle:last-of-type');
+ if (circle) circle.style.transform = '';
+ });
+ }
+ });
+ // Ping ring sur Paris/Rungis
+ var ring = document.querySelector('.cdf-ring');
+ if (ring){
+ var r = 4;
+ setInterval(function(){
+ r = 4;
+ var iv = setInterval(function(){
+ r += 0.6;
+ ring.setAttribute('r', r);
+ ring.setAttribute('opacity', Math.max(0, 0.8 - (r - 4) / 20));
+ if (r > 20) clearInterval(iv);
+ }, 50);
+ }, 2000);
+ }
+ }
+ initCarteFrance();
+
+ // 2. Count-up des chiffres au scroll
+ function animateNumber(el){
+ var target = parseInt(el.getAttribute('data-countup'));
+ var suffix = el.getAttribute('data-suffix') || '';
+ if (isNaN(target)) return;
+ var duration = 1600, start = performance.now();
+ function fmt(n){
+ if (target >= 10000) {
+ return (n >= 1000 ? Math.round(n / 1000) + 'k' : Math.round(n).toString());
+ }
+ return Math.round(n).toString();
+ }
+ function tick(now){
+ var t = Math.min(1, (now - start) / duration);
+ var eased = 1 - Math.pow(1 - t, 3);
+ el.textContent = fmt(eased * target) + suffix;
+ if (t < 1) requestAnimationFrame(tick);
+ }
+ requestAnimationFrame(tick);
+ }
+ var countups = document.querySelectorAll('[data-countup]');
+ if (countups.length){
+ var cuObserver = new IntersectionObserver(function(entries){
+ entries.forEach(function(entry){
+ if (entry.isIntersecting && !entry.target._animated){
+ entry.target._animated = true;
+ animateNumber(entry.target);
+ cuObserver.unobserve(entry.target);
+ }
+ });
+ }, { threshold: 0.3 });
+ countups.forEach(function(el){ cuObserver.observe(el); });
+ }
+
+ // 3. Stagger reveal des cartes
+ var gridSelectors = ['.cards-grid', '.service-grid', '.hero-services-grid'];
+ gridSelectors.forEach(function(sel){
+ document.querySelectorAll(sel).forEach(function(grid){
+ var children = grid.children;
+ for (var i = 0; i < children.length; i++){
+ var c = children[i];
+ c.style.opacity = '0';
+ c.style.transform = 'translateY(24px)';
+ c.style.transition = 'opacity 0.6s cubic-bezier(0.2,0.8,0.2,1), transform 0.6s cubic-bezier(0.2,0.8,0.2,1)';
+ }
+ });
+ });
+ var revealObserver = new IntersectionObserver(function(entries){
+ entries.forEach(function(entry){
+ if (entry.isIntersecting){
+ var children = entry.target.children;
+ for (var i = 0; i < children.length; i++){
+ (function(c, idx){
+ setTimeout(function(){
+ c.style.opacity = '1';
+ c.style.transform = 'translateY(0)';
+ }, idx * 90);
+ })(children[i], i);
+ }
+ revealObserver.unobserve(entry.target);
+ }
+ });
+ }, { threshold: 0.15 });
+ gridSelectors.forEach(function(sel){
+ document.querySelectorAll(sel).forEach(function(grid){
+ revealObserver.observe(grid);
+ });
+ });
+})();
 </script>
 </body>
 </html>
