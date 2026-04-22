@@ -30,7 +30,7 @@
 <meta property="og:title" content="Camion Net — Lavage poids lourd Rungis & stations mobiles en France">
 <meta property="og:description" content="Spécialiste du lavage industriel de véhicules depuis 2002. Centre Rungis (94) + 25 unités mobiles dans 75 départements. Lavage, désinfection HACCP, chambres froides.">
 <meta property="og:url" content="https://www.lavagecamions.com/">
-<meta property="og:image" content="/NouveauSite/og-camionnet.jpg">
+<meta property="og:image" content="/lavagecamions-preview/og-camionnet.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Camion Net — Lavage industriel de véhicules professionnels">
@@ -41,7 +41,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Camion Net — Lavage poids lourd Rungis & France entière">
 <meta name="twitter:description" content="Centre de lavage PL à Rungis + 25 unités mobiles dans 75 départements. Spécialiste du lavage industriel depuis 2002.">
-<meta name="twitter:image" content="/NouveauSite/og-camionnet.jpg">
+<meta name="twitter:image" content="/lavagecamions-preview/og-camionnet.jpg">
 
 <!-- ═══════════════════════════════════════════════════ -->
 <!-- Favicon (SVG inline — pas de fichier externe requis)-->
@@ -434,23 +434,25 @@ img{max-width:100%;display:block;}
 }
 
 /* ── BANDEAU CLIENTS DÉFILANT ── */
-.logo-ticker-section{background:linear-gradient(180deg,var(--off) 0%,#EEF2F6 100%);padding:80px 0 72px;border-top:1px solid var(--gray-100);border-bottom:1px solid var(--gray-100);}
-.logo-ticker-header{max-width:900px;margin:0 auto 48px;padding:0 32px;text-align:center;}
-.logo-ticker-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:18px;}
-.logo-ticker-eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--teal);}
-.logo-ticker-title{font-size:clamp(28px,4vw,42px);font-weight:900;color:var(--navy);line-height:1.1;letter-spacing:-0.03em;}
-.logo-ticker-wrap{width:100%;overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%);}
-.logo-ticker-track{display:flex;gap:40px;width:max-content;animation:logo-scroll 40s linear infinite;align-items:center;padding:12px 0;}
-.logo-ticker-track:hover{animation-play-state:paused;}
-.logo-slide{flex-shrink:0;height:110px;min-width:200px;padding:0 32px;display:flex;align-items:center;justify-content:center;background:#fff;border:1.5px solid var(--gray-100);border-radius:14px;box-shadow:0 4px 14px rgba(11,22,40,0.06);transition:transform .25s,box-shadow .25s,border-color .25s;}
-.logo-slide:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(11,22,40,0.14);border-color:var(--teal);}
+.logo-ticker-section{background:linear-gradient(180deg,#0B1628 0%,#142346 50%,#0F1F3E 100%);padding:88px 0 80px;border-top:1px solid rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.04);position:relative;overflow:hidden;}
+.logo-ticker-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(20,217,194,0.08) 0%,transparent 60%);pointer-events:none;}
+.logo-ticker-header{max-width:900px;margin:0 auto 52px;padding:0 32px;text-align:center;position:relative;}
+.logo-ticker-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);margin-bottom:18px;}
+.logo-ticker-eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 12px rgba(20,217,194,0.6);}
+.logo-ticker-title{font-size:clamp(28px,4vw,42px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-0.03em;}
+.logo-ticker-wrap{width:100%;overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 8%,#000 92%,transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 8%,#000 92%,transparent 100%);}
+.logo-ticker-track{display:flex;gap:32px;width:max-content;animation:logo-scroll 35s linear infinite;align-items:center;padding:12px 0;will-change:transform;}
+.logo-ticker-wrap:hover .logo-ticker-track{animation-play-state:paused;}
+.logo-slide{flex-shrink:0;height:110px;min-width:210px;padding:0 32px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid rgba(255,255,255,0.08);border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.25);transition:transform .3s cubic-bezier(0.2,0.8,0.2,1),box-shadow .3s;}
+.logo-slide:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 14px 36px rgba(20,217,194,0.25);}
 .logo-slide img{max-height:74px;max-width:200px;width:auto;height:auto;display:block;object-fit:contain;}
-@keyframes logo-scroll{from{transform:translate3d(0,0,0);}to{transform:translate3d(-50%,0,0);}}
+@keyframes logo-scroll{0%{transform:translate3d(0,0,0);}100%{transform:translate3d(-50%,0,0);}}
+@media(prefers-reduced-motion:reduce){.logo-ticker-track{animation:none;}}
 @media(max-width:768px){
- .logo-ticker-section{padding:56px 0 48px;}
+ .logo-ticker-section{padding:60px 0 52px;}
  .logo-ticker-header{margin-bottom:36px;}
- .logo-ticker-track{gap:24px;animation-duration:30s;}
- .logo-slide{height:84px;min-width:150px;padding:0 20px;}
+ .logo-ticker-track{gap:20px;animation-duration:28s;}
+ .logo-slide{height:84px;min-width:155px;padding:0 20px;}
  .logo-slide img{max-height:54px;max-width:150px;}
 }
 
@@ -542,12 +544,12 @@ img{max-width:100%;display:block;}
  "@graph": [
  {
  "@type": "Organization",
- "@id": "/NouveauSite/#organization",
+ "@id": "/lavagecamions-preview/#organization",
  "name": "Camion Net",
  "alternateName": ["Camion'net", "Camion Net Ecomobile", "SAS LZ NET"],
  "legalName": "SAS LZ NET",
- "url": "/NouveauSite/",
- "logo": "/NouveauSite/logo-camionnet.png",
+ "url": "/lavagecamions-preview/",
+ "logo": "/lavagecamions-preview/logo-camionnet.png",
  "foundingDate": "2002",
  "description": "Spécialiste français du lavage industriel de véhicules depuis 2002. Centre de lavage poids lourd à Rungis et stations mobiles dans 75 départements.",
  "slogan": "Lavage professionnel de vos véhicules industriels",
@@ -582,11 +584,11 @@ img{max-width:100%;display:block;}
  },
  {
  "@type": ["LocalBusiness", "AutomotiveBusiness"],
- "@id": "/NouveauSite/#centre-rungis",
+ "@id": "/lavagecamions-preview/#centre-rungis",
  "name": "Camion Net Ecomobile — Centre de lavage Rungis",
  "description": "Centre de lavage fixe pour poids lourds, camions frigorifiques et véhicules utilitaires au cœur du MIN de Rungis. Sur rendez-vous, accès facile depuis A6 et A86. Option convoyage de vos véhicules.",
- "url": "/NouveauSite/book-online/",
- "image": "/NouveauSite/centre-rungis.jpg",
+ "url": "/lavagecamions-preview/book-online/",
+ "image": "/lavagecamions-preview/centre-rungis.jpg",
  "telephone": "+33-6-80-93-61-31",
  "email": "contact@camionnet.fr",
  "priceRange": "€€",
@@ -621,12 +623,12 @@ img{max-width:100%;display:block;}
  "bestRating": "5"
  },
  "parentOrganization": {
- "@id": "/NouveauSite/#organization"
+ "@id": "/lavagecamions-preview/#organization"
  },
  "hasMap": "https://www.google.com/maps/place/Camion+Net+Ecomobile+Lavage+Pl/@48.7521566,2.3606119",
  "potentialAction": {
  "@type": "ReserveAction",
- "target": "/NouveauSite/book-online/",
+ "target": "/lavagecamions-preview/book-online/",
  "name": "Réserver un créneau"
  },
  "amenityFeature": [
@@ -639,12 +641,12 @@ img{max-width:100%;display:block;}
  },
  {
  "@type": "Service",
- "@id": "/NouveauSite/#stations-mobiles",
+ "@id": "/lavagecamions-preview/#stations-mobiles",
  "serviceType": "Station mobile de lavage poids lourd",
  "name": "Stations mobiles de lavage — Intervention sur site dans toute la France",
  "description": "Nos 25 unités mobiles haute pression autonomes interviennent directement sur votre site, dans un rayon de 100 km, pour le lavage de votre flotte de véhicules industriels. Aucune immobilisation. Site équipé d'un séparateur d'hydrocarbures : intervention sans contrainte. Site non équipé : une solution technique existe.",
  "provider": {
- "@id": "/NouveauSite/#organization"
+ "@id": "/lavagecamions-preview/#organization"
  },
  "areaServed": [
  {"@type": "AdministrativeArea", "name": "Île-de-France"},
@@ -676,20 +678,20 @@ img{max-width:100%;display:block;}
  },
  {
  "@type": "WebSite",
- "@id": "/NouveauSite/#website",
- "url": "/NouveauSite/",
+ "@id": "/lavagecamions-preview/#website",
+ "url": "/lavagecamions-preview/",
  "name": "Camion Net",
  "publisher": {
- "@id": "/NouveauSite/#organization"
+ "@id": "/lavagecamions-preview/#organization"
  },
  "inLanguage": "fr-FR"
  },
  {
  "@type": "BreadcrumbList",
  "itemListElement": [
- {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "/NouveauSite/"},
- {"@type": "ListItem", "position": 2, "name": "Centre Rungis", "item": "/NouveauSite/book-online/"},
- {"@type": "ListItem", "position": 3, "name": "Stations mobiles", "item": "/NouveauSite/station-mobile-lavage-camion-france/"}
+ {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "/lavagecamions-preview/"},
+ {"@type": "ListItem", "position": 2, "name": "Centre Rungis", "item": "/lavagecamions-preview/book-online/"},
+ {"@type": "ListItem", "position": 3, "name": "Stations mobiles", "item": "/lavagecamions-preview/station-mobile-lavage-camion-france/"}
  ]
  }
  ]
@@ -735,7 +737,7 @@ body { margin: 0; padding: 0; }
 <nav class="nav" id="mainNav">
  <div class="nav-inner">
  <!-- LOGO -->
- <div class="nav-logo" onclick="window.location.href='/NouveauSite/'" style="cursor:pointer;">
+ <div class="nav-logo" onclick="window.location.href='/lavagecamions-preview/'" style="cursor:pointer;">
  <div class="nav-logo-wrap">
  <div class="nav-logo-text">Camion<span>net</span></div>
  <span class="nav-logo-signature">by lz net</span>
@@ -744,14 +746,14 @@ body { margin: 0; padding: 0; }
 
  <!-- LIENS DESKTOP -->
  <div class="nav-links">
- <span class="nav-link" onclick="window.location.href='/NouveauSite/'">Accueil</span>
+ <span class="nav-link" onclick="window.location.href='/lavagecamions-preview/'">Accueil</span>
 
  <!-- Dropdown : À propos -->
  <div class="nav-dropdown">
  <div class="nav-dropdown-toggle">À propos</div>
  <div class="nav-dropdown-menu">
- <div class="nav-dropdown-item" onclick="window.location.href='/NouveauSite/notre-entreprise/'">Notre entreprise</div>
- <div class="nav-dropdown-item" onclick="window.location.href='/NouveauSite/tracabilite-qualite/'">Traçabilité & Qualité</div>
+ <div class="nav-dropdown-item" onclick="window.location.href='/lavagecamions-preview/notre-entreprise/'">Notre entreprise</div>
+ <div class="nav-dropdown-item" onclick="window.location.href='/lavagecamions-preview/tracabilite-qualite/'">Traçabilité & Qualité</div>
  </div>
  </div>
 
@@ -759,12 +761,13 @@ body { margin: 0; padding: 0; }
  <div class="nav-dropdown">
  <div class="nav-dropdown-toggle">Services</div>
  <div class="nav-dropdown-menu">
- <div class="nav-dropdown-item" onclick="window.location.href='/NouveauSite/station-mobile-lavage-camion-france/'">Stations mobiles (sur site)</div>
- <div class="nav-dropdown-item" onclick="window.location.href='/NouveauSite/book-online/'">Centre de lavage Rungis</div>
- <div class="nav-dropdown-item" onclick="window.location.href='/NouveauSite/nettoyage-industriel/'">Nettoyage industriel HP</div>
- <div class="nav-dropdown-item" onclick="window.location.href='/NouveauSite/nettoyage-chambre-froide/'">Chambres froides</div>
- <div class="nav-dropdown-item" onclick="window.location.href='/NouveauSite/nettoyage-batiment-industriel/'">Bardage & Bâtiments</div>
- <div class="nav-dropdown-item" onclick="window.location.href='/NouveauSite/nettoyage-mobilier-urbain/'">Mobilier urbain</div>
+ <div class="nav-dropdown-item" onclick="window.location.href='/lavagecamions-preview/station-mobile-lavage-camion-france/'">Stations mobiles (sur site)</div>
+ <div class="nav-dropdown-item" onclick="window.location.href='/lavagecamions-preview/book-online/'">Centre de lavage Rungis</div>
+ <div class="nav-dropdown-item" onclick="window.location.href='/lavagecamions-preview/nettoyage-industriel/'">Nettoyage industriel HP</div>
+ <div class="nav-dropdown-item" onclick="window.location.href='/lavagecamions-preview/nettoyage-chambre-froide/'">Chambres froides</div>
+ <div class="nav-dropdown-item" onclick="window.location.href='/lavagecamions-preview/nettoyage-batiment-industriel/'">Bardage & Bâtiments</div>
+ <div class="nav-dropdown-item" onclick="window.location.href='/lavagecamions-preview/nettoyage-mobilier-urbain/'">Mobilier urbain</div>
+ <div class="nav-dropdown-item" onclick="window.location.href='/lavagecamions-preview/nettoyage-camions-aeroport-cdg/'">Aéroport Paris-CDG</div>
  </div>
  </div>
 
@@ -772,18 +775,18 @@ body { margin: 0; padding: 0; }
  <div class="nav-dropdown">
  <div class="nav-dropdown-toggle">Véhicules</div>
  <div class="nav-dropdown-menu">
- <div class="nav-dropdown-item" onclick="window.location.href='/NouveauSite/nettoyage-vehicule-pro/'">Tous types de véhicules</div>
+ <div class="nav-dropdown-item" onclick="window.location.href='/lavagecamions-preview/nettoyage-vehicule-pro/'">Tous types de véhicules</div>
  </div>
  </div>
 
- <span class="nav-link" onclick="window.location.href='/NouveauSite/devis-lavage-camion/'">Devis & Tarifs</span>
+ <span class="nav-link" onclick="window.location.href='/lavagecamions-preview/devis-lavage-camion/'">Devis & Tarifs</span>
  </div>
 
  <!-- CTAs DESKTOP -->
  <div class="nav-ctas">
  <button class="btn-membres" onclick="window.open('https://www.lavagecamions.com/members-area','_blank')">Espace membres</button>
  <button class="btn-resa" onclick="window.open('https://www.lavagecamions.com/book-online','_blank')">Réservation Rungis</button>
- <button class="btn-devis" onclick="window.location.href='/NouveauSite/devis-lavage-camion/'">Devis →</button>
+ <button class="btn-devis" onclick="window.location.href='/lavagecamions-preview/devis-lavage-camion/'">Devis →</button>
  </div>
 
  <!-- BURGER MOBILE -->
@@ -795,20 +798,21 @@ body { margin: 0; padding: 0; }
 
  <!-- MENU MOBILE -->
  <div class="nav-mobile-menu" id="mobileMenu">
- <span class="nav-mobile-link" onclick="window.location.href='/NouveauSite/'">Accueil</span>
- <span class="nav-mobile-link" onclick="window.location.href='/NouveauSite/notre-entreprise/'">Notre entreprise</span>
- <span class="nav-mobile-link" onclick="window.location.href='/NouveauSite/tracabilite-qualite/'">Traçabilité & Qualité</span>
- <span class="nav-mobile-link" onclick="window.location.href='/NouveauSite/station-mobile-lavage-camion-france/'">Stations mobiles</span>
- <span class="nav-mobile-link" onclick="window.location.href='/NouveauSite/book-online/'">Centre Rungis</span>
- <span class="nav-mobile-link" onclick="window.location.href='/NouveauSite/nettoyage-industriel/'">Nettoyage industriel</span>
- <span class="nav-mobile-link" onclick="window.location.href='/NouveauSite/nettoyage-chambre-froide/'">Chambres froides</span>
- <span class="nav-mobile-link" onclick="window.location.href='/NouveauSite/nettoyage-batiment-industriel/'">Bardage & Bâtiments</span>
- <span class="nav-mobile-link" onclick="window.location.href='/NouveauSite/nettoyage-vehicule-pro/'">Nos véhicules</span>
- <span class="nav-mobile-link" onclick="window.location.href='/NouveauSite/devis-lavage-camion/'">Devis & Tarifs</span>
+ <span class="nav-mobile-link" onclick="window.location.href='/lavagecamions-preview/'">Accueil</span>
+ <span class="nav-mobile-link" onclick="window.location.href='/lavagecamions-preview/notre-entreprise/'">Notre entreprise</span>
+ <span class="nav-mobile-link" onclick="window.location.href='/lavagecamions-preview/tracabilite-qualite/'">Traçabilité & Qualité</span>
+ <span class="nav-mobile-link" onclick="window.location.href='/lavagecamions-preview/station-mobile-lavage-camion-france/'">Stations mobiles</span>
+ <span class="nav-mobile-link" onclick="window.location.href='/lavagecamions-preview/book-online/'">Centre Rungis</span>
+ <span class="nav-mobile-link" onclick="window.location.href='/lavagecamions-preview/nettoyage-industriel/'">Nettoyage industriel</span>
+ <span class="nav-mobile-link" onclick="window.location.href='/lavagecamions-preview/nettoyage-chambre-froide/'">Chambres froides</span>
+ <span class="nav-mobile-link" onclick="window.location.href='/lavagecamions-preview/nettoyage-batiment-industriel/'">Bardage & Bâtiments</span>
+ <span class="nav-mobile-link" onclick="window.location.href='/lavagecamions-preview/nettoyage-camions-aeroport-cdg/'">Aéroport Paris-CDG</span>
+ <span class="nav-mobile-link" onclick="window.location.href='/lavagecamions-preview/nettoyage-vehicule-pro/'">Nos véhicules</span>
+ <span class="nav-mobile-link" onclick="window.location.href='/lavagecamions-preview/devis-lavage-camion/'">Devis & Tarifs</span>
  <div class="nav-mobile-ctas">
  <button class="btn-membres" onclick="window.open('https://www.lavagecamions.com/members-area','_blank')">Espace membres</button>
  <button class="btn-resa" onclick="window.open('https://www.lavagecamions.com/book-online','_blank');toggleMobileMenu()">Réservation Rungis</button>
- <button class="btn-devis" onclick="window.location.href='/NouveauSite/devis-lavage-camion/'">Demander un devis →</button>
+ <button class="btn-devis" onclick="window.location.href='/lavagecamions-preview/devis-lavage-camion/'">Demander un devis →</button>
  </div>
  </div>
 </nav>
@@ -820,8 +824,8 @@ body { margin: 0; padding: 0; }
  <h1>Lavage camion <em>Clermont-Ferrand</em> et Auvergne-Rhône-Alpes</h1>
  <p class="hero-sub">Camion Net couvre Clermont-Ferrand et l'ensemble du département 63 (Auvergne-Rhône-Alpes) via ses stations mobiles. Nos équipes se déplacent directement sur vos sites pour le lavage de votre flotte professionnelle : VUL, PL, SPL, camions frigorifiques, bus. Rayon d'intervention 100 km depuis Clermont-Ferrand.</p>
  <div class="hero-actions">
- <button class="btn-primary" onclick="window.location.href='/NouveauSite/devis-lavage-camion/'">Demander un devis</button>
- <button class="btn-secondary" onclick="window.location.href='/NouveauSite/station-mobile-lavage-camion-france/'">Nos stations mobiles</button>
+ <button class="btn-primary" onclick="window.location.href='/lavagecamions-preview/devis-lavage-camion/'">Demander un devis</button>
+ <button class="btn-secondary" onclick="window.location.href='/lavagecamions-preview/station-mobile-lavage-camion-france/'">Nos stations mobiles</button>
  </div>
  </div>
  </section>
@@ -861,22 +865,22 @@ body { margin: 0; padding: 0; }
  <div class="card">
  <div class="card-title">Lavage extérieur haute pression</div>
  <p class="card-text">Carrosserie, cabine, bâche, jantes. Haute pression. Pour VUL, PL, SPL, bus et frigorifiques.</p>
- <div class="card-link" onclick="window.location.href='/NouveauSite/lavage-exterieur-camion/'">En savoir plus <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+ <div class="card-link" onclick="window.location.href='/lavagecamions-preview/lavage-exterieur-camion/'">En savoir plus <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
  </div>
  <div class="card">
  <div class="card-title">Nettoyage intérieur caisse</div>
  <p class="card-text">Parois, plancher, cloisons. Adapté aux caisses alimentaires et au transport de marchandises sensibles.</p>
- <div class="card-link" onclick="window.location.href='/NouveauSite/lavage-interieur-caisse-camion/'">En savoir plus <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+ <div class="card-link" onclick="window.location.href='/lavagecamions-preview/lavage-interieur-caisse-camion/'">En savoir plus <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
  </div>
  <div class="card">
  <div class="card-title">Désinfection HACCP</div>
  <p class="card-text">Produit homologué contact alimentaire, bordereau d'intervention horodaté. Conforme normes alimentaires.</p>
- <div class="card-link" onclick="window.location.href='/NouveauSite/lavage-camion-frigorifique/'">En savoir plus <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+ <div class="card-link" onclick="window.location.href='/lavagecamions-preview/lavage-camion-frigorifique/'">En savoir plus <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
  </div>
  <div class="card">
  <div class="card-title">Nettoyage cabine</div>
  <p class="card-text">Aspiration, dépoussiérage, surfaces, vitres intérieures. Sur devis.</p>
- <div class="card-link" onclick="window.location.href='/NouveauSite/nettoyage-cabine-camion/'">En savoir plus <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+ <div class="card-link" onclick="window.location.href='/lavagecamions-preview/nettoyage-cabine-camion/'">En savoir plus <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
  </div>
  </div>
  </div>
@@ -913,27 +917,27 @@ body { margin: 0; padding: 0; }
  <a class="footer-link" style="background:var(--off);border:1.5px solid var(--gray-100);border-radius:10px;padding:14px 18px;display:block;cursor:pointer;color:var(--gray-700);font-size:14px;font-weight:600;text-align:center;transition:all 0.15s;"
  onmouseover="this.style.borderColor='var(--teal)';this.style.color='var(--navy)';"
  onmouseout="this.style.borderColor='var(--gray-100)';this.style.color='var(--gray-700)';"
- onclick="window.location.href='/NouveauSite/lavage-camion-lyon/'">Lavage camion Lyon (69)</a>
+ onclick="window.location.href='/lavagecamions-preview/lavage-camion-lyon/'">Lavage camion Lyon (69)</a>
  <a class="footer-link" style="background:var(--off);border:1.5px solid var(--gray-100);border-radius:10px;padding:14px 18px;display:block;cursor:pointer;color:var(--gray-700);font-size:14px;font-weight:600;text-align:center;transition:all 0.15s;"
  onmouseover="this.style.borderColor='var(--teal)';this.style.color='var(--navy)';"
  onmouseout="this.style.borderColor='var(--gray-100)';this.style.color='var(--gray-700)';"
- onclick="window.location.href='/NouveauSite/lavage-camion-limoges/'">Lavage camion Limoges (87)</a>
+ onclick="window.location.href='/lavagecamions-preview/lavage-camion-limoges/'">Lavage camion Limoges (87)</a>
  <a class="footer-link" style="background:var(--off);border:1.5px solid var(--gray-100);border-radius:10px;padding:14px 18px;display:block;cursor:pointer;color:var(--gray-700);font-size:14px;font-weight:600;text-align:center;transition:all 0.15s;"
  onmouseover="this.style.borderColor='var(--teal)';this.style.color='var(--navy)';"
  onmouseout="this.style.borderColor='var(--gray-100)';this.style.color='var(--gray-700)';"
- onclick="window.location.href='/NouveauSite/lavage-camion-macon/'">Lavage camion Mâcon (71)</a>
+ onclick="window.location.href='/lavagecamions-preview/lavage-camion-macon/'">Lavage camion Mâcon (71)</a>
  <a class="footer-link" style="background:var(--off);border:1.5px solid var(--gray-100);border-radius:10px;padding:14px 18px;display:block;cursor:pointer;color:var(--gray-700);font-size:14px;font-weight:600;text-align:center;transition:all 0.15s;"
  onmouseover="this.style.borderColor='var(--teal)';this.style.color='var(--navy)';"
  onmouseout="this.style.borderColor='var(--gray-100)';this.style.color='var(--gray-700)';"
- onclick="window.location.href='/NouveauSite/lavage-camion-bourges/'">Lavage camion Bourges (18)</a>
+ onclick="window.location.href='/lavagecamions-preview/lavage-camion-bourges/'">Lavage camion Bourges (18)</a>
  <a class="footer-link" style="background:var(--off);border:1.5px solid var(--gray-100);border-radius:10px;padding:14px 18px;display:block;cursor:pointer;color:var(--gray-700);font-size:14px;font-weight:600;text-align:center;transition:all 0.15s;"
  onmouseover="this.style.borderColor='var(--teal)';this.style.color='var(--navy)';"
  onmouseout="this.style.borderColor='var(--gray-100)';this.style.color='var(--gray-700)';"
- onclick="window.location.href='/NouveauSite/lavage-camion-chateauroux/'">Lavage camion Châteauroux (36)</a>
+ onclick="window.location.href='/lavagecamions-preview/lavage-camion-chateauroux/'">Lavage camion Châteauroux (36)</a>
  <a class="footer-link" style="background:var(--off);border:1.5px solid var(--gray-100);border-radius:10px;padding:14px 18px;display:block;cursor:pointer;color:var(--gray-700);font-size:14px;font-weight:600;text-align:center;transition:all 0.15s;"
  onmouseover="this.style.borderColor='var(--teal)';this.style.color='var(--navy)';"
  onmouseout="this.style.borderColor='var(--gray-100)';this.style.color='var(--gray-700)';"
- onclick="window.location.href='/NouveauSite/lavage-camion-valence/'">Lavage camion Valence (26)</a>
+ onclick="window.location.href='/lavagecamions-preview/lavage-camion-valence/'">Lavage camion Valence (26)</a>
  </div>
  </div>
  </section>
@@ -943,7 +947,7 @@ body { margin: 0; padding: 0; }
  <h2>Vous êtes sur Clermont-Ferrand ou la région ?</h2>
  <p>Décrivez-nous votre flotte — réponse tarifaire sous 48h, avec tournée planifiée sous 15 jours.</p>
  <div class="cta-btns">
- <button class="btn-primary" onclick="window.location.href='/NouveauSite/devis-lavage-camion/'">Demander un devis</button>
+ <button class="btn-primary" onclick="window.location.href='/lavagecamions-preview/devis-lavage-camion/'">Demander un devis</button>
  </div>
  </div>
  </div>
@@ -966,41 +970,42 @@ body { margin: 0; padding: 0; }
  </div>
  <div class="footer-col">
  <h4>Services</h4>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/station-mobile-lavage-camion-france/'">Stations mobiles</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/book-online/'">Centre Rungis</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-vehicule-pro/'">Lavage véhicules</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-industriel/'">Nettoyage industriel</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-chambre-froide/'">Chambres froides</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-batiment-industriel/'">Bardage & bâtiments</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-mobilier-urbain/'">Mobilier urbain</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/entreprise-nettoyage-industriel-station-service/'">Nettoyage station-service</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/station-mobile-lavage-camion-france/'">Stations mobiles</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/book-online/'">Centre Rungis</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/nettoyage-vehicule-pro/'">Lavage véhicules</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/nettoyage-industriel/'">Nettoyage industriel</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/nettoyage-chambre-froide/'">Chambres froides</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/nettoyage-batiment-industriel/'">Bardage & bâtiments</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/nettoyage-mobilier-urbain/'">Mobilier urbain</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/entreprise-nettoyage-industriel-station-service/'">Nettoyage station-service</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/nettoyage-camions-aeroport-cdg/'">Aéroport Paris-CDG</span>
  </div>
  <div class="footer-col">
  <h4>Véhicules</h4>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camionnette/'">Camionnette & VUL</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-20m3/'">Camion 20m³</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-poids-lourd/'">Poids lourd (SPL)</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-frigorifique/'">Camion frigorifique</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-vehicule-pro/'">Bus & car</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-vehicule-pro/'">Engins TP</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/lavage-camionnette/'">Camionnette & VUL</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/lavage-camion-20m3/'">Camion 20m³</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/lavage-poids-lourd/'">Poids lourd (SPL)</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/lavage-camion-frigorifique/'">Camion frigorifique</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/nettoyage-vehicule-pro/'">Bus & car</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/nettoyage-vehicule-pro/'">Engins TP</span>
  </div>
  <div class="footer-col">
  <h4>Prestations</h4>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-exterieur-camion/'">Lavage extérieur HP</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-interieur-caisse-camion/'">Nettoyage intérieur caisse</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/nettoyage-cabine-camion/'">Nettoyage cabine</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-frigorifique/'">Désinfection HACCP</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/lavage-exterieur-camion/'">Lavage extérieur HP</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/lavage-interieur-caisse-camion/'">Nettoyage intérieur caisse</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/nettoyage-cabine-camion/'">Nettoyage cabine</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/lavage-camion-frigorifique/'">Désinfection HACCP</span>
  </div>
  <div class="footer-col">
  <h4>Villes</h4>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-paris/'">Paris (75)</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-lyon/'">Lyon (69)</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-marseille/'">Marseille (13)</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-bordeaux/'">Bordeaux (33)</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-toulouse/'">Toulouse (31)</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-lille/'">Lille (59)</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/lavage-camion-strasbourg/'">Strasbourg (67)</span>
- <span class="footer-link" onclick="window.location.href='/NouveauSite/station-mobile-lavage-camion-france/'" style="color:var(--teal);font-weight:600;">+ 22 autres villes →</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/lavage-camion-paris/'">Paris (75)</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/lavage-camion-lyon/'">Lyon (69)</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/lavage-camion-marseille/'">Marseille (13)</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/lavage-camion-bordeaux/'">Bordeaux (33)</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/lavage-camion-toulouse/'">Toulouse (31)</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/lavage-camion-lille/'">Lille (59)</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/lavage-camion-strasbourg/'">Strasbourg (67)</span>
+ <span class="footer-link" onclick="window.location.href='/lavagecamions-preview/station-mobile-lavage-camion-france/'" style="color:var(--teal);font-weight:600;">+ 22 autres villes →</span>
  </div>
  <div class="footer-col">
  <h4>Contact</h4>
@@ -1014,16 +1019,16 @@ body { margin: 0; padding: 0; }
  contact@camionnet.fr
  </a>
  </div>
- <button class="btn-devis" style="margin-top:20px;width:100%;" onclick="window.location.href='/NouveauSite/devis-lavage-camion/'">Demander un devis →</button>
+ <button class="btn-devis" style="margin-top:20px;width:100%;" onclick="window.location.href='/lavagecamions-preview/devis-lavage-camion/'">Demander un devis →</button>
  </div>
  </div>
  <div class="footer-bottom">
  <div class="footer-legal">
  © 2025 Camion Net by LZ net — Tous droits réservés
- <a href="/NouveauSite/mentions-legales/">Mentions légales</a>
- <a href="/NouveauSite/politique-de-confidentialite/">Politique de confidentialité</a>
- <a href="/NouveauSite/politique-cookies/">Cookies</a>
- <a href="/NouveauSite/cgv/">CGV</a>
+ <a href="/lavagecamions-preview/mentions-legales/">Mentions légales</a>
+ <a href="/lavagecamions-preview/politique-de-confidentialite/">Politique de confidentialité</a>
+ <a href="/lavagecamions-preview/politique-cookies/">Cookies</a>
+ <a href="/lavagecamions-preview/cgv/">CGV</a>
  </div>
  <div style="font-size:12px;color:rgba(255,255,255,0.25);">Design staging — non publié en production</div>
  </div>

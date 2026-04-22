@@ -2,7 +2,7 @@
 
 Preview publique du site Camion Net v2 avant intégration dans Wix.
 
-**URL en ligne :** https://camionnetmaker.github.io/NouveauSite/
+**URL en ligne :** https://camionnetmaker.github.io/lavagecamions-preview/
 
 ## Structure
 
